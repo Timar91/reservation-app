@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+# Reservation App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple reservation management application built with React. The app allows users to filter, sort, and search reservations.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Filter Reservations**: Filter reservations by status, shift, area, and date.
+- **Sort Reservations**: Sort reservations by first name, last name, and guest number.
+- **Search Reservations**: Search reservations by customer name.
 
-### `npm start`
+## Components
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### ReservationList
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The `ReservationList` component is the main component that integrates all functionalities including filtering, sorting, and searching reservations. It fetches reservation data from a remote server and manages the state of filters, sort orders, and search queries.
 
-### `npm test`
+### ReservationFilter
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The `ReservationFilter` component provides dropdown menus and date input to filter reservations based on different criteria.
 
-### `npm run build`
+### ReservationSorter
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The `ReservationSorter` component provides buttons to sort reservations by first name, last name, and guest number. It also highlights the active sort button.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### ReservationSearch
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The `ReservationSearch` component provides a text input to search for reservations by customer name.
 
-### `npm run eject`
+## Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. **Download the project zip file**.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. **Extract the zip file** to your desired location.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. **Navigate to the project directory**:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    ```bash
+    cd reservation-app
+    ```
 
-## Learn More
+4. **Install dependencies**:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    ```bash
+    npm install
+    ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+5. **Start the development server**:
 
-### Code Splitting
+    ```bash
+    npm start
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+    This will start the development server and open the app in your default web browser.
 
-### Analyzing the Bundle Size
+## Running Tests
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The project includes unit tests for the components using Jest and React Testing Library.
 
-### Making a Progressive Web App
+1. **Run the tests**:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+    ```bash
+    npm test
+    ```
 
-### Advanced Configuration
+    This will run all the tests and display the results in the terminal.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Unit Tests
 
-### Deployment
+- **ReservationFilter**: Tests that the `onFilter` callback is called with the correct arguments when different filter options are selected.
+- **ReservationSorter**: Tests that the `onSort` callback is called with the correct arguments and that the active sort button is highlighted correctly.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Potential Optimizations
+- **Given more time, the following optimizations and improvements could be made to the project:
 
-### `npm run build` fails to minify
+    # Integration Tests:
+    - Add comprehensive integration tests to cover the entire user flow, including filtering, sorting, and searching reservations.
+    Ensure that the integration tests validate the interaction between different components and the overall behavior of the application.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    # Error Handling:
+    - Add proper error handling for network requests to manage cases where data fetching fails.
+    Display user-friendly error messages to inform users of issues such as network errors or data unavailability.
+
+    # Conduct an accessibility audit and ensure that all interactive elements are accessible to users with disabilities.
+    - Implement ARIA roles and attributes where necessary to improve the accessibility of the application.
+
+    # Optimization of Tests:
+    - Increase test coverage and ensure that edge cases are thoroughly tested.
+    Optimize test performance by mocking external dependencies and minimizing redundant tests.
