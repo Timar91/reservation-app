@@ -28,23 +28,21 @@ The `ReservationSearch` component provides a text input to search for reservatio
 
 ## Installation
 
-1. **Download the project zip file**.
-
-2. **Extract the zip file** to your desired location.
-
-3. **Navigate to the project directory**:
+1. **Clone the project.
+ 
+2. **Navigate to the project directory**:
 
     ```bash
     cd reservation-app
     ```
 
-4. **Install dependencies**:
+3. **Install dependencies**:
 
     ```bash
     npm install
     ```
 
-5. **Start the development server**:
+4. **Start the development server**:
 
     ```bash
     npm start
